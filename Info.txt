@@ -1,0 +1,137 @@
+Pokedex App - Final Project for ITN263
+
+Pokedex app that displays a list of pokemon.
+When a pokemon is pressed, information about that pokemon will display, as the pokedex entry.
+
+*Gen One*
+Pokemon information includes:
+     a default and shiny sprite
+     the pokemons name and pokedex number
+     height and weight
+     types
+     abilities
+     pokedex entry from gen 3
+     where to find up to gen 3
+     a flatlist of moves?
+
+
+
+Version 1.0:  Monday, November 20, 2023
+    Basic outline for project
+        * Basic Styling
+        App.js
+            Stack Nav for Home Screen, Pokedex Screen, and Pokemon Screen
+        HomeScreen.js
+            Button to go to Pokedex Screen
+        PokedexScreen. js
+            Flatlist of buttons with names
+            * When pressed will pass info to Pokemon Screen
+        PokemonScreen.js
+            Displays name and URL
+            * Will display height, weight, types, abilities, sprites, entry, location
+
+
+
+Version 2.0: Tuesday, November 28, 2023    
+    Revised Outline, Display, Logic
+        * Revised, but still Basic Styling
+        App.js
+            Stack Nav for Home Screen, Pokedex Screen
+                * Removed Pokemon Screen because of double fetch complications
+        HomeScreen.js
+            * Remains same
+            * Will have image of pokedex and a large button to start (open the dex)
+        PokedexScreen.js
+            * Implement Search bar which will show a pokemon and sprite at top of screen  
+            Flatlist of buttons with names
+                * Flastlist will be updated to show id, sprite, and name
+            View split to 2, one half of flatlist with buttons, the other pokemon information
+            Pokemon View container contains:
+                Sprite - Default and shiny
+                Name 
+                Height + Weight 
+                Type 1
+                Abillity 1
+                * Will be revised to show type 2, all abilities, location, entry, and moves
+
+
+
+Version 2.1: Wednesday, November 29, 2023
+    Created Asana Calender
+        PokedexScreen.js
+            Flatlist of buttons with names
+                * Flastlist will be updated to show id, sprite, and name
+            Pokemon View container contains:
+                Sprite - Default and shiny
+                Name
+                Height + Weight
+                Type 1 + Type 2
+                Abilitys 1 - ?
+                Pokedex entry
+                * Will add location and moves and stats
+
+
+
+Version 2.2: Sunday, December 3rd, 2023
+    * Need to Format Home Screen for image and larger button
+    * Adjust pokedex styling
+    * Add search bar/drop down list to filter versions
+    * Add drop down list to filter what generation of pokemon is displayed
+    * Adjust styling by 12/7
+    PokedexScreen.js
+        Flatlist of buttons with names:
+            * Need to add id and sprite
+            Adjusted width
+        Pokemon View Container:    
+            Sprite, Name, Height, Types, Abilites, Pokedex entry, catch location
+
+
+
+Version 2.3 Tuesday, December 4th, 2023            
+    App.js
+        - Removed Stack Nav Header from HomeScreen.js
+    HomeScreen.js
+        - Added a background image of pokedex cover to display over full screen
+        - Adjusted button to display on bottom left  
+    PokedexScreen.js
+        * Need to add drop-down menu used for gen filtering for pokemon displayed and method of catch
+        * Need to adjust overall styling and create more outlined and space groups for information
+        * Add background color and adjust view container colors
+        * Add sprite in flatlist
+
+
+Version 2.5 Wednesday, December 6th, 2023
+    App.js
+        - No changes
+
+    HomeScreen.js   
+        - Adjusted: image size, background color
+        - Changed button to touchable opacity for more custom text details
+    
+    PokedexScreen.js
+        - Changed button flatlist to touchable opacity flatlist
+        - Added dropdown menu for generation
+        - Filter location will filter to show red,blue,gold,silver,ruby,sapphire
+        - Restyled view containers
+
+
+Version 3 Friday, December 8th, 2023
+    Tested for final submission
+    App.js
+        - Stack nav that defaults to HomeScreen.js
+    HomeScreen.js
+        - Pokedex image background
+        - Hidden Header
+        - When button is pressed change screens to PokedexScreen.js
+    PokedexScreen.js
+        -  First displayed is a drop down list to select gen 1,2,3
+            - Fetch pokedex based on selection
+        - Pokemon name will be displayed on the left side using touchable opacity
+            - When pressed, show the pokemon details
+        - Poke details consists of:
+            - Id, name, sprite default and shiny
+            - Height converted to inches, Weight converted to pounds
+            - Types and abilities shown, however many as there are
+            - Pokedex entry from emerald (the most updated entry in gen 3)
+            - Location/Method of capute
+        - Gen can be clicked to change            
